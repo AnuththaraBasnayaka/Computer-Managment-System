@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86B4A1F0-8FE1-4258-BB84-6F615FA7466C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Computer_Managment_System</RootNamespace>
+    <AssemblyName>Computer Managment System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Charts.WinForms, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.0\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Reports, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Reports.1.0.5\lib\net45\Bunifu.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLoader, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.2.0\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Utils.1.0.6\lib\net\Bunifu.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Portable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.MySQL.Portable.1.0.3\lib\net45\MySQL.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenHtmlToPdf, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenHtmlToPdf.1.12.0.0\lib\net45\OpenHtmlToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Anuththara\newrepairClass.cs" />
+    <Compile Include="Classes\Anuththara\repairsearchClass.cs" />
+    <Compile Include="Classes\Anuththara\servicestatusClass.cs" />
+    <Compile Include="Classes\Bashitha\Customer.cs" />
+    <Compile Include="Classes\Bashitha\Quotation.cs" />
+    <Compile Include="Classes\Bashitha\QuotationDBUtil.cs" />
+    <Compile Include="Classes\date.cs" />
+    <Compile Include="Classes\Dimuthu\StockData.cs" />
+    <Compile Include="Classes\Shashika\dbUtill.cs" />
+    <Compile Include="Classes\Kavindi\supplierDBUtill.cs" />
+    <Compile Include="Classes\Nadun\Createbill.cs" />
+    <Compile Include="Classes\Nadun\createInvoice.cs" />
+    <Compile Include="Classes\Punsisi\paymentdata.cs" />
+    <Compile Include="Classes\Shashika\supplier.cs" />
+    <Compile Include="Classes\Tharuka\EmployeeDetails.cs" />
+    <Compile Include="Classes\Tharuka\Financial.cs" />
+    <Compile Include="Forms\Anuththara\ServiceRepair_NewRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_NewRepair.designer.cs">
+      <DependentUpon>ServiceRepair_NewRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_Print.designer.cs">
+      <DependentUpon>ServiceRepair_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_Report.designer.cs">
+      <DependentUpon>ServiceRepair_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_StatusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_StatusEdit.designer.cs">
+      <DependentUpon>ServiceRepair_StatusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Anuththara\ServiceRepair_View.designer.cs">
+      <DependentUpon>ServiceRepair_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bashitha\CustomerDetailQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bashitha\CustomerDetailQ.designer.cs">
+      <DependentUpon>CustomerDetailQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bashitha\Quotations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bashitha\Quotations.designer.cs">
+      <DependentUpon>Quotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bashitha\ViewQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bashitha\ViewQuotation.designer.cs">
+      <DependentUpon>ViewQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bashitha\ViewQuotationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bashitha\ViewQuotationList.designer.cs">
+      <DependentUpon>ViewQuotationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockAdd.designer.cs">
+      <DependentUpon>StockAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockAnalysis.designer.cs">
+      <DependentUpon>StockAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\stockEdits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\stockEdits.designer.cs">
+      <DependentUpon>stockEdits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockPrintcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockPrintcs.designer.cs">
+      <DependentUpon>StockPrintcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\Stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\Stocks.designer.cs">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dimuthu\StockSearch.designer.cs">
+      <DependentUpon>StockSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kavindi\printSupplierRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kavindi\printSupplierRep.Designer.cs">
+      <DependentUpon>printSupplierRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kavindi\supplierUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kavindi\supplierUpdate.designer.cs">
+      <DependentUpon>supplierUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Nadun\BillList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Nadun\BillList.designer.cs">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Nadun\DetailBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Nadun\DetailBill.designer.cs">
+      <DependentUpon>DetailBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Punsisi\SearchPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Punsisi\SearchPayment.designer.cs">
+      <DependentUpon>SearchPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shashika\ordersMonthlyRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shashika\ordersMonthlyRep.Designer.cs">
+      <DependentUpon>ordersMonthlyRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tharuka\ViewDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tharuka\ViewDetails.Designer.cs">
+      <DependentUpon>ViewDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shashika\order_CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shashika\order_CreateOrder.Designer.cs">
+      <DependentUpon>order_CreateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerDashboard.Designer.cs">
+      <DependentUpon>SellerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Shashika\Order.cs" />
+    <Compile Include="Classes\Shashika\orderDBUtill.cs" />
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shashika\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shashika\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Shashika\view_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shashika\view_Order.Designer.cs">
+      <DependentUpon>view_Order.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Anuththara\ServiceRepair_NewRepair.resx">
+      <DependentUpon>ServiceRepair_NewRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anuththara\ServiceRepair_Print.resx">
+      <DependentUpon>ServiceRepair_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anuththara\ServiceRepair_Report.resx">
+      <DependentUpon>ServiceRepair_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anuththara\ServiceRepair_StatusEdit.resx">
+      <DependentUpon>ServiceRepair_StatusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Anuththara\ServiceRepair_View.resx">
+      <DependentUpon>ServiceRepair_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bashitha\CustomerDetailQ.resx">
+      <DependentUpon>CustomerDetailQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bashitha\Quotations.resx">
+      <DependentUpon>Quotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bashitha\ViewQuotation.resx">
+      <DependentUpon>ViewQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bashitha\ViewQuotationList.resx">
+      <DependentUpon>ViewQuotationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dimuthu\StockAdd.resx">
+      <DependentUpon>StockAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dimuthu\StockAnalysis.resx">
+      <DependentUpon>StockAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dimuthu\stockEdits.resx">
+      <DependentUpon>stockEdits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dimuthu\StockPrintcs.resx">
+      <DependentUpon>StockPrintcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dimuthu\Stocks.resx">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dimuthu\StockSearch.resx">
+      <DependentUpon>StockSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kavindi\printSupplierRep.resx">
+      <DependentUpon>printSupplierRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kavindi\supplierUpdate.resx">
+      <DependentUpon>supplierUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Nadun\BillList.resx">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Nadun\DetailBill.resx">
+      <DependentUpon>DetailBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Punsisi\SearchPayment.resx">
+      <DependentUpon>SearchPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shashika\ordersMonthlyRep.resx">
+      <DependentUpon>ordersMonthlyRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tharuka\ViewDetails.resx">
+      <DependentUpon>ViewDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shashika\order_CreateOrder.resx">
+      <DependentUpon>order_CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerDashboard.resx">
+      <DependentUpon>SellerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shashika\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Shashika\view_Order.resx">
+      <DependentUpon>view_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Forms\Dimuthu\logo\logo 1.png" />
+    <Content Include="testlogo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
