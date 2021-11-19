@@ -1,7 +1,7 @@
 # Computer-Managment-System
-IT Group project 
-my Part - Service and Warrenty Claims
-NewTech Company is the Client that we used and here is a discription about the function that I implemented. 
+--IT Group project 
+--my Part - Service and Warrenty Claims
+*NewTech Company is the Client that we used and here is a discription about the function that I implemented. 
 The company provides the service to the client for repair their electronic equipment including all kind of computers, 
 printers, mobile accessories. This is the desktop application system therefore customer does not directly 
 interact with system. Here Sale person take service details and information from the customer. 
