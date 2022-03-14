@@ -1,5 +1,6 @@
 # Computer-Managment-System
---IT Group project 
+==SLIIT 2nd Year 2nd Semester ++
+--ITP Group project 
 --my Part - Service and Warrenty Claims
 *NewTech Company is the Client that we used and here is a discription about the function that I implemented. 
 The company provides the service to the client for repair their electronic equipment including all kind of computers, 
