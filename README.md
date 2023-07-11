@@ -1,10 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AnuththaraBasnayaka/HotelManagementSystem">
-    <img src="images/computershoplogo.png" alt="Logo" width="100" height="100">
+  <a href="https://github.com/AnuththaraBasnayaka/Computer-Managment-System">
+    <img src="images/logo.png" alt="Logo" width="200" height="180">
   </a>
-
   <h3 align="center">Computer Shop Management System </h3>
 
   <p align="center">
@@ -81,17 +80,20 @@ The system provides the following functionalities:
 This project utilizes the following development environment and programming language:
 
 ### Visual Studio
-<img src="images/vslogo.png" alt="mern" >
+<img src="images/vslogo.png" alt="vs" >
+
 - Visual Studio is a widely used integrated development environment (IDE) for developing websites, desktop applications, web apps, and more.
 - It is developed by Microsoft and provides a comprehensive set of tools and features for efficient application development.
 
 ### SQL Server Management Studio
-<img src="images/sql.png" alt="mern" >
+<img src="images/sql.png" alt="sql" >
+
 - SQL Server Management Studio (SSMS) is an application developed by Microsoft for configuring, managing, and administering all components within Microsoft SQL Server.
 - It serves as a powerful tool for database administrators and developers to interact with SQL Server databases.
 
 ### C#
-<img src="images/csharp.png" alt="mern" >
+<img src="images/csharp.png" alt="csharp" >
+
 - C# (pronounced "C sharp") is a popular programming language known for its use of object-oriented concepts.
 - It is utilized in the development of web apps, desktop applications, and web services.
 - C# produces output files in the form of EXE (executable) or DLL (dynamic-link library).
@@ -99,9 +101,7 @@ This project utilizes the following development environment and programming lang
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgment
-🚀 Thank all SLIIT Lectures and who helps to develope and understand this Architecture
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+🚀 Thank all SLIIT Lectures and who helps to develope and understand this project
 
 
 
